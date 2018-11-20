@@ -13,3 +13,17 @@ A la fin du projet, l'utilisateur sera capable d'effectué ces tâches:
 
 Si le temps nous le permet, l'utilisateur sera capable:
 - Choisir une recette selon les ingrédients disponible
+
+L’objectif final de ce projet est que l’utilisateur puisse effectuer les tâches suivantes :
+
+- Affichage du frigo et de ses aliments.
+- Ajout d'un aliment.
+- Retrait d'un aliment.
+- Modification d'un aliment.
+- Affichage d'un message d'alerte en cas de rupture de stock d'un aliment.
+
+Si le temps le permet, une version améliorée proposera de :
+
+- Proposer des recettes avec les aliments disponibles dans le frigo.
+- Gérer la contenance des produits.
+- Gestion des dates de péremptions
