@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetFreeGoWindows
 {
-    public partial class Form1 : Form
+    public partial class frm_lostpassword : Form
     {
-        public Form1()
+        public frm_lostpassword()
         {
             InitializeComponent();
         }
