@@ -1,0 +1,13 @@
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\bin\Debug\netstandard2.0\FreeGo.deps.json
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\bin\Debug\netstandard2.0\FreeGo.dll
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\bin\Debug\netstandard2.0\FreeGo.pdb
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\FreeGo.csprojAssemblyReference.cache
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\FreeGo.csproj.CoreCompileInputs.cache
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\FreeGo.AssemblyInfoInputs.cache
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\FreeGo.AssemblyInfo.cs
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\FreeGo.dll
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\FreeGo.pdb
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\FreeGo\FreeGo\FreeGo\obj\Debug\netstandard2.0\test.xaml.g.cs

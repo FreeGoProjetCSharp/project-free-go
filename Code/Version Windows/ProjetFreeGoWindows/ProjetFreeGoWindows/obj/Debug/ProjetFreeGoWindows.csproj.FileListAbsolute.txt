@@ -1,0 +1,16 @@
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\bin\Debug\ProjetFreeGoWindows.exe.config
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\bin\Debug\ProjetFreeGoWindows.exe
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\bin\Debug\ProjetFreeGoWindows.pdb
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.csprojAssemblyReference.cache
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.Properties.Resources.resources
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.csproj.GenerateResource.cache
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.csproj.CoreCompileInputs.cache
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.exe
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.pdb
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.frm_login.resources
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.frm_createaccount.resources
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.frm_lostpassword.resources
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\bin\Debug\System.Data.SQLite.dll
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\bin\Debug\System.Data.SQLite.xml
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.csproj.CopyComplete
