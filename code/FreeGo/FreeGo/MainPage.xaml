@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FreeGo"
+             x:Class="FreeGo.MainPage">
+
+    <StackLayout>
+        <Label Text="test" HorizontalTextAlignment="Center" WidthRequest="40" FontSize="Large" FontAttributes="Bold"></Label>
+        
+        <StackLayout>
+            <Label Text="Login" HorizontalOptions="Center" FontSize="25"></Label>
+            <Image Source="User.png"/>
+            <StackLayout>
+                <Label Text="email"></Label>
+                <Entry Placeholder="Email: test.test@test.ch"></Entry>
+                <Label Text="Password"></Label>
+                <Entry Placeholder="Passwd" IsPassword="True"></Entry>
+                <Button Text="Login" Clicked="Login_Clicked" NavigationPage.TitleView="CreatAccount" />
+            </StackLayout>
+            
+        </StackLayout>
+        
+        
+    </StackLayout>
+
+</ContentPage>
