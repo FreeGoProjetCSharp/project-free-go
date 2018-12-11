@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.grp_CreateAccount = new System.Windows.Forms.GroupBox();
+            this.cmdClear = new System.Windows.Forms.Button();
+            this.cmdCreateAccount = new System.Windows.Forms.Button();
             this.lblPassConf = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
             this.lblMail = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtPassConf = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.cmdCreateAccount = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.llblBackLogin = new System.Windows.Forms.LinkLabel();
-            this.cmdClear = new System.Windows.Forms.Button();
             this.grp_CreateAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,6 +72,25 @@
             this.grp_CreateAccount.TabIndex = 1;
             this.grp_CreateAccount.TabStop = false;
             this.grp_CreateAccount.Text = "Create account";
+            // 
+            // cmdClear
+            // 
+            this.cmdClear.Location = new System.Drawing.Point(110, 293);
+            this.cmdClear.Name = "cmdClear";
+            this.cmdClear.Size = new System.Drawing.Size(75, 23);
+            this.cmdClear.TabIndex = 12;
+            this.cmdClear.Text = "Clear";
+            this.cmdClear.UseVisualStyleBackColor = true;
+            // 
+            // cmdCreateAccount
+            // 
+            this.cmdCreateAccount.Location = new System.Drawing.Point(198, 293);
+            this.cmdCreateAccount.Name = "cmdCreateAccount";
+            this.cmdCreateAccount.Size = new System.Drawing.Size(97, 23);
+            this.cmdCreateAccount.TabIndex = 11;
+            this.cmdCreateAccount.Text = "Create account";
+            this.cmdCreateAccount.UseVisualStyleBackColor = true;
+            this.cmdCreateAccount.Click += new System.EventHandler(this.cmdCreateAccount_Click);
             // 
             // lblPassConf
             // 
@@ -127,6 +146,15 @@
             this.txtPass.Size = new System.Drawing.Size(207, 20);
             this.txtPass.TabIndex = 5;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ProjetFreeGoWindows.Properties.Resources.password;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 170);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 25);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(71, 111);
@@ -141,25 +169,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(207, 20);
             this.txtName.TabIndex = 2;
-            // 
-            // cmdCreateAccount
-            // 
-            this.cmdCreateAccount.Location = new System.Drawing.Point(198, 293);
-            this.cmdCreateAccount.Name = "cmdCreateAccount";
-            this.cmdCreateAccount.Size = new System.Drawing.Size(97, 23);
-            this.cmdCreateAccount.TabIndex = 11;
-            this.cmdCreateAccount.Text = "Create account";
-            this.cmdCreateAccount.UseVisualStyleBackColor = true;
-            this.cmdCreateAccount.Click += new System.EventHandler(this.cmdCreateAccount_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::ProjetFreeGoWindows.Properties.Resources.password;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 170);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 25);
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -198,15 +207,6 @@
             this.llblBackLogin.TabStop = true;
             this.llblBackLogin.Text = "<- Back to login";
             this.llblBackLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblBackLogin_LinkClicked);
-            // 
-            // cmdClear
-            // 
-            this.cmdClear.Location = new System.Drawing.Point(110, 293);
-            this.cmdClear.Name = "cmdClear";
-            this.cmdClear.Size = new System.Drawing.Size(75, 23);
-            this.cmdClear.TabIndex = 12;
-            this.cmdClear.Text = "Clear";
-            this.cmdClear.UseVisualStyleBackColor = true;
             // 
             // frm_createaccount
             // 

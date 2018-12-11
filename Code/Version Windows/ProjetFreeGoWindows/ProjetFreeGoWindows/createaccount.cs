@@ -55,29 +55,33 @@ namespace ProjetFreeGoWindows
             string regex = "^(?=.*[a - z])(?=.*[A - Z])(?=.*\\d)(?=.*[^\\da - zA - Z]).{ 8, 15 }$";
 
             Regex pattern = new Regex(regex);
+            
 
             try
             {
                 MailAddress mail = new MailAddress(emailaddress);
-
-                if (txtPass.Text != "") pattern.Match(txtPass.Text);
-
-                if (txtPass.Text != "" && txtPassConf.Text != "")
-                {
-                    if (txtPass.Text == txtPassConf.Text)
-                    {
-                        string passwordcrypt = CreateMD5(txtPass.Text);
-                    }
-                }
-
-
-
-
+                pattern.Match(txtPass.Text);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("L'adresse mail n'est pas valide");
+                MessageBox.Show("Le message d'erreur est le suivant:"+ex.Message);
             }
+
+            if (txtPass.Text != "" && txtPassConf.Text != "")
+            {
+                if (txtPass.Text == txtPassConf.Text)
+                {
+                    string passwordcrypt = CreateMD5(txtPass.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Les mots de passe ne correspondent pas");
+                }
+            }
+            else { MessageBox.Show("Les mots de passe ne peuvent pas être vide"); }
+
+      
         }
+
     }
 }

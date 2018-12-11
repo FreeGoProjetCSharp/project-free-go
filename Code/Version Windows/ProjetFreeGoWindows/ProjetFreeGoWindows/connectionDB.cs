@@ -14,7 +14,7 @@ namespace ProjetFreeGoWindows
 
         public connectionDB()
         {
-            m_dbConnection = new SQLiteConnection("Data Source=Splendor.sqlite;Version=3;");
+            m_dbConnection = new SQLiteConnection("Data Source=freego.sqlite;Version=3;");
 
 
         }
