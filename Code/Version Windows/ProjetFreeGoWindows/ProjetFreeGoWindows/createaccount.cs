@@ -14,6 +14,9 @@ namespace ProjetFreeGoWindows
 {
     public partial class frm_createaccount : Form
     {
+        private connectionDB conn;
+
+
         public frm_createaccount()
         {
             InitializeComponent();
@@ -49,6 +52,7 @@ namespace ProjetFreeGoWindows
         private void cmdCreateAccount_Click(object sender, EventArgs e)
         {
             string emailaddress = txtMail.Text;
+            string username = txtName.Text;
 
             //if (txtPass.Text != "") { string password = txtPass.Text; } else MessageBox.Show("Entrer un mot de passe");
 
@@ -56,7 +60,6 @@ namespace ProjetFreeGoWindows
 
             Regex pattern = new Regex(regex);
             
-
             try
             {
                 MailAddress mail = new MailAddress(emailaddress);
@@ -72,6 +75,12 @@ namespace ProjetFreeGoWindows
                 if (txtPass.Text == txtPassConf.Text)
                 {
                     string passwordcrypt = CreateMD5(txtPass.Text);
+
+                    frm_login frm_Login = new frm_login();
+                    frm_Login.Show();
+                    this.Hide();
+
+                    conn.CreateAccount(username, emailaddress, passwordcrypt);
                 }
                 else
                 {
@@ -83,5 +92,11 @@ namespace ProjetFreeGoWindows
       
         }
 
+        private void frm_createaccount_Load(object sender, EventArgs e)
+        {
+            conn = new connectionDB();
+
+            
+        }
     }
 }

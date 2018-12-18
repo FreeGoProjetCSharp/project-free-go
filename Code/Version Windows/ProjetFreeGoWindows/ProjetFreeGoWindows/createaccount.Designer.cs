@@ -219,6 +219,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_createaccount";
             this.Text = "Form create account";
+            this.Load += new System.EventHandler(this.frm_createaccount_Load);
             this.grp_CreateAccount.ResumeLayout(false);
             this.grp_CreateAccount.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

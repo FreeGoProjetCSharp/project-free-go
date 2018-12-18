@@ -36,6 +36,7 @@
             this.llbl_createaccount = new System.Windows.Forms.LinkLabel();
             this.llbl_passwordlost = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmdLogin = new System.Windows.Forms.Button();
             this.grp_SignIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +78,7 @@
             // 
             // grp_SignIn
             // 
+            this.grp_SignIn.Controls.Add(this.cmdLogin);
             this.grp_SignIn.Controls.Add(this.llbl_createaccount);
             this.grp_SignIn.Controls.Add(this.llbl_passwordlost);
             this.grp_SignIn.Controls.Add(this.txtBox_usr);
@@ -85,7 +87,7 @@
             this.grp_SignIn.Controls.Add(this.lbl_pass);
             this.grp_SignIn.Location = new System.Drawing.Point(12, 123);
             this.grp_SignIn.Name = "grp_SignIn";
-            this.grp_SignIn.Size = new System.Drawing.Size(237, 203);
+            this.grp_SignIn.Size = new System.Drawing.Size(237, 230);
             this.grp_SignIn.TabIndex = 4;
             this.grp_SignIn.TabStop = false;
             this.grp_SignIn.Text = "Sign-in";
@@ -93,7 +95,7 @@
             // llbl_createaccount
             // 
             this.llbl_createaccount.AutoSize = true;
-            this.llbl_createaccount.Location = new System.Drawing.Point(12, 174);
+            this.llbl_createaccount.Location = new System.Drawing.Point(12, 207);
             this.llbl_createaccount.Name = "llbl_createaccount";
             this.llbl_createaccount.Size = new System.Drawing.Size(85, 13);
             this.llbl_createaccount.TabIndex = 5;
@@ -104,7 +106,7 @@
             // llbl_passwordlost
             // 
             this.llbl_passwordlost.AutoSize = true;
-            this.llbl_passwordlost.Location = new System.Drawing.Point(124, 174);
+            this.llbl_passwordlost.Location = new System.Drawing.Point(124, 207);
             this.llbl_passwordlost.Name = "llbl_passwordlost";
             this.llbl_passwordlost.Size = new System.Drawing.Size(107, 13);
             this.llbl_passwordlost.TabIndex = 4;
@@ -121,12 +123,21 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // cmdLogin
+            // 
+            this.cmdLogin.Location = new System.Drawing.Point(156, 170);
+            this.cmdLogin.Name = "cmdLogin";
+            this.cmdLogin.Size = new System.Drawing.Size(75, 23);
+            this.cmdLogin.TabIndex = 6;
+            this.cmdLogin.Text = "login";
+            this.cmdLogin.UseVisualStyleBackColor = true;
+            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(255, 338);
+            this.ClientSize = new System.Drawing.Size(255, 361);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grp_SignIn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -150,6 +161,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel llbl_createaccount;
         private System.Windows.Forms.LinkLabel llbl_passwordlost;
+        private System.Windows.Forms.Button cmdLogin;
     }
 }
 
