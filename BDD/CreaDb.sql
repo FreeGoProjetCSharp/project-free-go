@@ -10,9 +10,6 @@ CREATE TABLE User(
   Fridge_IdFridge INT NOT NULL,
   PRIMARY KEY (IdUser))
 
-insert into User (Username, UserEmail, UserPassword,Fridge_IdFridge) values ("leozmoos","leo.zmoos@cpnv.ch","oui",1)
-INSERT INTO [Fridge] DEFAULT VALUES;
-
 CREATE TABLE ShoppingList (
   IdShoppingList INT NOT NULL,
   Fridge_IdFridge INT NOT NULL,

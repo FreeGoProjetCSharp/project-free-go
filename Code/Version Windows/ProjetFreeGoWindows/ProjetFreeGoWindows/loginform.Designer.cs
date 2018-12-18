@@ -30,13 +30,13 @@
         {
             this.lbl_usr = new System.Windows.Forms.Label();
             this.lbl_pass = new System.Windows.Forms.Label();
-            this.txtBox_usr = new System.Windows.Forms.TextBox();
-            this.txt_Pass = new System.Windows.Forms.TextBox();
+            this.txtUsr = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.grp_SignIn = new System.Windows.Forms.GroupBox();
+            this.cmdLogin = new System.Windows.Forms.Button();
             this.llbl_createaccount = new System.Windows.Forms.LinkLabel();
             this.llbl_passwordlost = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmdLogin = new System.Windows.Forms.Button();
             this.grp_SignIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,9 +46,9 @@
             this.lbl_usr.AutoSize = true;
             this.lbl_usr.Location = new System.Drawing.Point(12, 41);
             this.lbl_usr.Name = "lbl_usr";
-            this.lbl_usr.Size = new System.Drawing.Size(55, 13);
+            this.lbl_usr.Size = new System.Drawing.Size(129, 13);
             this.lbl_usr.TabIndex = 0;
-            this.lbl_usr.Text = "Username";
+            this.lbl_usr.Text = "Username(Case sensitive)";
             // 
             // lbl_pass
             // 
@@ -59,30 +59,30 @@
             this.lbl_pass.TabIndex = 1;
             this.lbl_pass.Text = "Password (Max. 60 char)";
             // 
-            // txtBox_usr
+            // txtUsr
             // 
-            this.txtBox_usr.Location = new System.Drawing.Point(15, 67);
-            this.txtBox_usr.MaxLength = 100;
-            this.txtBox_usr.Name = "txtBox_usr";
-            this.txtBox_usr.Size = new System.Drawing.Size(216, 20);
-            this.txtBox_usr.TabIndex = 2;
+            this.txtUsr.Location = new System.Drawing.Point(15, 67);
+            this.txtUsr.MaxLength = 100;
+            this.txtUsr.Name = "txtUsr";
+            this.txtUsr.Size = new System.Drawing.Size(216, 20);
+            this.txtUsr.TabIndex = 2;
             // 
-            // txt_Pass
+            // txtPass
             // 
-            this.txt_Pass.Location = new System.Drawing.Point(15, 130);
-            this.txt_Pass.MaxLength = 60;
-            this.txt_Pass.Name = "txt_Pass";
-            this.txt_Pass.PasswordChar = '*';
-            this.txt_Pass.Size = new System.Drawing.Size(216, 20);
-            this.txt_Pass.TabIndex = 3;
+            this.txtPass.Location = new System.Drawing.Point(15, 130);
+            this.txtPass.MaxLength = 60;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(216, 20);
+            this.txtPass.TabIndex = 3;
             // 
             // grp_SignIn
             // 
             this.grp_SignIn.Controls.Add(this.cmdLogin);
             this.grp_SignIn.Controls.Add(this.llbl_createaccount);
             this.grp_SignIn.Controls.Add(this.llbl_passwordlost);
-            this.grp_SignIn.Controls.Add(this.txtBox_usr);
-            this.grp_SignIn.Controls.Add(this.txt_Pass);
+            this.grp_SignIn.Controls.Add(this.txtUsr);
+            this.grp_SignIn.Controls.Add(this.txtPass);
             this.grp_SignIn.Controls.Add(this.lbl_usr);
             this.grp_SignIn.Controls.Add(this.lbl_pass);
             this.grp_SignIn.Location = new System.Drawing.Point(12, 123);
@@ -91,6 +91,16 @@
             this.grp_SignIn.TabIndex = 4;
             this.grp_SignIn.TabStop = false;
             this.grp_SignIn.Text = "Sign-in";
+            // 
+            // cmdLogin
+            // 
+            this.cmdLogin.Location = new System.Drawing.Point(156, 170);
+            this.cmdLogin.Name = "cmdLogin";
+            this.cmdLogin.Size = new System.Drawing.Size(75, 23);
+            this.cmdLogin.TabIndex = 6;
+            this.cmdLogin.Text = "login";
+            this.cmdLogin.UseVisualStyleBackColor = true;
+            this.cmdLogin.Click += new System.EventHandler(this.cmdLogin_Click);
             // 
             // llbl_createaccount
             // 
@@ -123,15 +133,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // cmdLogin
-            // 
-            this.cmdLogin.Location = new System.Drawing.Point(156, 170);
-            this.cmdLogin.Name = "cmdLogin";
-            this.cmdLogin.Size = new System.Drawing.Size(75, 23);
-            this.cmdLogin.TabIndex = 6;
-            this.cmdLogin.Text = "login";
-            this.cmdLogin.UseVisualStyleBackColor = true;
-            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,8 +156,8 @@
 
         private System.Windows.Forms.Label lbl_usr;
         private System.Windows.Forms.Label lbl_pass;
-        private System.Windows.Forms.TextBox txtBox_usr;
-        private System.Windows.Forms.TextBox txt_Pass;
+        private System.Windows.Forms.TextBox txtUsr;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.GroupBox grp_SignIn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel llbl_createaccount;

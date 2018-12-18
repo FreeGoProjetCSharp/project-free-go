@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connectionDB.cs" />
+    <Compile Include="fridgeview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fridgeview.Designer.cs">
+      <DependentUpon>fridgeview.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,8 +78,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users.cs" />
     <EmbeddedResource Include="createaccount.resx">
       <DependentUpon>createaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fridgeview.resx">
+      <DependentUpon>fridgeview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginform.resx">
       <DependentUpon>loginform.cs</DependentUpon>
