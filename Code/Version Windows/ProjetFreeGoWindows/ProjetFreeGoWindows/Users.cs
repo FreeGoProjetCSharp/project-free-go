@@ -21,15 +21,5 @@ namespace ProjetFreeGoWindows
             this.password = password;
             this.idFridge = idFridge;
         }
-
-
-
-
-
-
-
-
-
-
     }
 }

@@ -54,6 +54,8 @@
             this.richTextBox20 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsrName = new System.Windows.Forms.Label();
+            this.cmdAddAlim = new System.Windows.Forms.Button();
+            this.cmdRemoveAlim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -285,11 +287,32 @@
             this.lblUsrName.Size = new System.Drawing.Size(0, 20);
             this.lblUsrName.TabIndex = 4;
             // 
+            // cmdAddAlim
+            // 
+            this.cmdAddAlim.Location = new System.Drawing.Point(317, 12);
+            this.cmdAddAlim.Name = "cmdAddAlim";
+            this.cmdAddAlim.Size = new System.Drawing.Size(119, 23);
+            this.cmdAddAlim.TabIndex = 5;
+            this.cmdAddAlim.Text = "Ajouter un aliment";
+            this.cmdAddAlim.UseVisualStyleBackColor = true;
+            this.cmdAddAlim.Click += new System.EventHandler(this.cmdAddAlim_Click);
+            // 
+            // cmdRemoveAlim
+            // 
+            this.cmdRemoveAlim.Location = new System.Drawing.Point(317, 39);
+            this.cmdRemoveAlim.Name = "cmdRemoveAlim";
+            this.cmdRemoveAlim.Size = new System.Drawing.Size(119, 23);
+            this.cmdRemoveAlim.TabIndex = 6;
+            this.cmdRemoveAlim.Text = "Retirer un aliment";
+            this.cmdRemoveAlim.UseVisualStyleBackColor = true;
+            // 
             // frm_fridgeview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 606);
+            this.Controls.Add(this.cmdRemoveAlim);
+            this.Controls.Add(this.cmdAddAlim);
             this.Controls.Add(this.lblUsrName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -333,5 +356,7 @@
         private System.Windows.Forms.RichTextBox richTextBox20;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUsrName;
+        private System.Windows.Forms.Button cmdAddAlim;
+        private System.Windows.Forms.Button cmdRemoveAlim;
     }
 }

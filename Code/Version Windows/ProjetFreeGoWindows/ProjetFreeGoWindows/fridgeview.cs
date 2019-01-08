@@ -20,16 +20,20 @@ namespace ProjetFreeGoWindows
         {
             InitializeComponent();
             lblName.Text = username;
+            lblUsrName.Text = username;
             this.informations = conn.GetUserInfo(username);
         }
 
         private void frm_fridgeview_Load(object sender, EventArgs e)
         {
             
+        }
 
-            
-            
-            
+        private void cmdAddAlim_Click(object sender, EventArgs e)
+        {
+            frm_addAlim frm_AddAlim = new frm_addAlim();
+            frm_AddAlim.Show();
+            this.Hide();
         }
     }
 }
