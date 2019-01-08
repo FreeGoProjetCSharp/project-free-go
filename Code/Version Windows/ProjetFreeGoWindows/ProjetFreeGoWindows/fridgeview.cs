@@ -31,7 +31,7 @@ namespace ProjetFreeGoWindows
 
         private void cmdAddAlim_Click(object sender, EventArgs e)
         {
-            frm_addAlim frm_AddAlim = new frm_addAlim();
+            frm_addAlim frm_AddAlim = new frm_addAlim(informations[0]);
             frm_AddAlim.Show();
             this.Hide();
         }

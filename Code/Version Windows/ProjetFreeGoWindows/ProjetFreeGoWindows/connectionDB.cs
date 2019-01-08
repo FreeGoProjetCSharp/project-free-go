@@ -117,5 +117,12 @@ namespace ProjetFreeGoWindows
 
             return info;
         }
+
+        public void AddIngredient(string Name, string ExpirationDate, int Quantity, int Unit, string Path)
+        {
+            // insert into Ingredients (Nom,ExpirationDate,Quantity,Unit,ImagePath) values ("test","10.01.2019",1,1,"C:\\Users\\Leo.ZMOOS\\Desktop\\ProjetFreeGo\\project-free-go\\Code\\Version Windows\\ProjetFreeGoWindows\\ProjetFreeGoWindows\\bin\\Debug\\Images\\syly\\")
+            string sql = "insert into Ingredients (Nom,ExpirationDate,Quantity,Unit,ImagePath) values ("+'"'+Name+'"'+ExpirationDate+Quantity+Unit+Path+")";
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+        }
     }
 }

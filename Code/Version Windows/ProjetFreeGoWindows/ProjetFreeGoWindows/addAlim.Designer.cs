@@ -31,9 +31,9 @@
             this.lblAddAlim = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.cmdAddAliment = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblExpirationDate = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.cldrExpiration = new System.Windows.Forms.MonthCalendar();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.numericQuantity = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,12 +76,12 @@
             this.cmdAddAliment.UseVisualStyleBackColor = true;
             this.cmdAddAliment.Click += new System.EventHandler(this.cmdAddAliment_Click);
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtName.Location = new System.Drawing.Point(17, 83);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(228, 20);
+            this.txtName.TabIndex = 3;
             // 
             // lblExpirationDate
             // 
@@ -92,11 +92,11 @@
             this.lblExpirationDate.TabIndex = 4;
             this.lblExpirationDate.Text = "Date d\'expiration:";
             // 
-            // monthCalendar1
+            // cldrExpiration
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(18, 179);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 5;
+            this.cldrExpiration.Location = new System.Drawing.Point(18, 179);
+            this.cldrExpiration.Name = "cldrExpiration";
+            this.cldrExpiration.TabIndex = 5;
             // 
             // lblQuantity
             // 
@@ -178,9 +178,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericQuantity);
             this.Controls.Add(this.lblQuantity);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.cldrExpiration);
             this.Controls.Add(this.lblExpirationDate);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.cmdAddAliment);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblAddAlim);
@@ -200,9 +200,9 @@
         private System.Windows.Forms.Label lblAddAlim;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button cmdAddAliment;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblExpirationDate;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar cldrExpiration;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.NumericUpDown numericQuantity;
         private System.Windows.Forms.Label label1;
