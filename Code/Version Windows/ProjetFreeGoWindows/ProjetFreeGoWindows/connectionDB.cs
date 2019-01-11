@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace ProjetFreeGoWindows
 {
@@ -11,6 +12,8 @@ namespace ProjetFreeGoWindows
     {
         //connection to the database
         private SQLiteConnection m_dbConnection;
+        private List<Ingredients> IngredientsInFridge = new List<Ingredients>();
+
 
         public connectionDB()
         {
@@ -118,11 +121,97 @@ namespace ProjetFreeGoWindows
             return info;
         }
 
-        public void AddIngredient(string Name, string ExpirationDate, int Quantity, int Unit, string Path)
+        private int GetUserId(string username)
         {
-            // insert into Ingredients (Nom,ExpirationDate,Quantity,Unit,ImagePath) values ("test","10.01.2019",1,1,"C:\\Users\\Leo.ZMOOS\\Desktop\\ProjetFreeGo\\project-free-go\\Code\\Version Windows\\ProjetFreeGoWindows\\ProjetFreeGoWindows\\bin\\Debug\\Images\\syly\\")
-            string sql = "insert into Ingredients (Nom,ExpirationDate,Quantity,Unit,ImagePath) values ("+'"'+Name+'"'+ExpirationDate+Quantity+Unit+Path+")";
-            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            int iduser = 0;
+
+            string sql = "select IdUser from User where UserName = "+"'"+username+"'";
+            try
+            {
+                SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    iduser = Convert.ToInt32(reader["IdUser"]);
+                }
+
+                return iduser;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Il y a une erreur");
+                return 0;
+            }
         }
+
+        private int GetIdFridge(int IdUser)
+        {
+            int idfridge = 0;
+
+            string sql = "select IdFridge from Fridge where IdUser ="+IdUser;
+            try
+            {
+                SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    idfridge = Convert.ToInt32(reader["IdFridge"]);
+                }
+
+                return idfridge = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Il y a une erreur");
+                return 0;
+            }
+        }
+
+        private int GetLastIngredientsAdded(int User)
+        {
+            string sql = "SELECT * FROM Ingredients where IdUser=2 ORDER BY IdIngredients DESC LIMIT 1;";
+
+            return 0;
+        }
+
+
+        public bool AddIngredient(string UserName, string Name, string ExpirationDate, int Quantity, int Unit, string Path)
+        {
+            int iduser = GetUserId(UserName);
+            int idfrige = GetIdFridge(iduser);
+
+            // insert into Ingredients (Nom,ExpirationDate,Quantity,Unit,ImagePath) values ("test","10.01.2019",1,1,"C:\\Users\\Leo.ZMOOS\\Desktop\\ProjetFreeGo\\project-free-go\\Code\\Version Windows\\ProjetFreeGoWindows\\ProjetFreeGoWindows\\bin\\Debug\\Images\\syly\\")
+            string sql = "insert into Ingredients (IdUser,Nom,ExpirationDate,Quantity,Unit,ImagePath) values ("+iduser+"'"+Name+"'"+","+"'"+ExpirationDate+"'"+","+Quantity+","+Unit+","+"'"+Path+"'"+")";
+
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("L'aliment à correctement été ajouté");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Il y a une erreur, vérifier vos champs");
+                return false;
+            }    
+        }
+
+        string sql2 = "insert into IngredientsListInFridge values (" + 1 +,1)"
+
+        public List<Ingredients> GetIngredientsByUser(string username)
+        {
+            
+
+
+
+
+
+            return IngredientsInFridge;
+        }
+
+
     }
 }

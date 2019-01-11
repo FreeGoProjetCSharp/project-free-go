@@ -13,16 +13,25 @@ namespace ProjetFreeGoWindows
 {
     public partial class frm_addAlim : Form
     {
-        private connectionDB conn = new connectionDB();
-        string[] informations = new string[2];
-        bool imageupload = false;
+        private connectionDB conn = new connectionDB(); // Connection to BDD
+        string[] informations = new string[2]; // Array with user information
+        bool imageupload = false; // For knowing if the image was upload correctly
 
+        /// <summary>
+        /// frm_addAlim: Constructor
+        /// </summary>
+        /// <param name="username"></param>
         public frm_addAlim(string username)
         {
             InitializeComponent();
             this.informations = conn.GetUserInfo(username);
         }
 
+        /// <summary>
+        /// frm_addAlim_Load: Load Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frm_addAlim_Load(object sender, EventArgs e)
         {
             txtPathFile.Hide();
@@ -37,7 +46,7 @@ namespace ProjetFreeGoWindows
         private void cmdUploadFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp;)|*.jpg; *.jpeg; *.gif; *.bmp;";
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png; *.PNG;)|*.jpg; *.jpeg; *.gif; *.bmp; *.png; *.PNG;";
             if(open.ShowDialog() == DialogResult.OK)
             {
                 txtPathFile.Text = open.FileName;
@@ -72,10 +81,18 @@ namespace ProjetFreeGoWindows
                 Directory.CreateDirectory(path);
 
                 // Copy the image file in the image folder
-                File.Copy(txtPathFile.Text, Path.Combine(path, Path.GetFileName(txtPathFile.Text)),true);
+                string extension = Path.GetExtension(txtPathFile.Text);
+                path = Path.Combine(path, txtName.Text + extension);
+
+                File.Copy(txtPathFile.Text, path,true);
 
                 // Add ingredient to the database
-                conn.AddIngredient(txtName.Text,datestring,quantity,unit,path);
+                if (conn.AddIngredient(username,txtName.Text,datestring,quantity,unit,path) == true)
+                {
+                    this.Hide();
+                    frm_fridgeview frm_Fridgeview = new frm_fridgeview(username);
+                    frm_Fridgeview.Show();
+                }
             }
             else
             {
