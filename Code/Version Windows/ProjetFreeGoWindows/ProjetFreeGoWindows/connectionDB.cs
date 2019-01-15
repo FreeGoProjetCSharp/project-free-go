@@ -121,6 +121,11 @@ namespace ProjetFreeGoWindows
             return info;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
         private int GetUserId(string username)
         {
             int iduser = 0;
@@ -145,6 +150,11 @@ namespace ProjetFreeGoWindows
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="IdUser"></param>
+        /// <returns></returns>
         private int GetIdFridge(int IdUser)
         {
             int idfridge = 0;
@@ -169,6 +179,11 @@ namespace ProjetFreeGoWindows
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="IdUser"></param>
+        /// <returns></returns>
         private int GetLastIngredientsAdded(int IdUser)
         {
             int IdLastIngredient = 0;
@@ -193,13 +208,21 @@ namespace ProjetFreeGoWindows
 
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="UserName"></param>
+        /// <param name="Name"></param>
+        /// <param name="ExpirationDate"></param>
+        /// <param name="Quantity"></param>
+        /// <param name="Unit"></param>
+        /// <param name="Path"></param>
+        /// <returns></returns>
         public bool AddIngredient(string UserName, string Name, string ExpirationDate, int Quantity, int Unit, string Path)
         {
             int iduser = GetUserId(UserName);
             int idfridge = GetIdFridge(iduser);
 
-            // insert into Ingredients (Nom,ExpirationDate,Quantity,Unit,ImagePath) values ("test","10.01.2019",1,1,"C:\\Users\\Leo.ZMOOS\\Desktop\\ProjetFreeGo\\project-free-go\\Code\\Version Windows\\ProjetFreeGoWindows\\ProjetFreeGoWindows\\bin\\Debug\\Images\\syly\\")
             string sql = "insert into Ingredients (IdUser,Nom,ExpirationDate,Quantity,Unit,ImagePath) values (" + iduser +","+"'" + Name + "'" + "," + "'" + ExpirationDate + "'" + "," + Quantity + "," + Unit + "," + "'" + Path + "'" + ")";
 
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
@@ -221,19 +244,25 @@ namespace ProjetFreeGoWindows
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
         public List<Ingredients> GetIngredientsByUser(string username)
         {
             int IdUser = GetUserId(username);
 
             try
             {
-                string sql = "select Ingredients.Nom, Ingredients.ExpirationDate, Ingredients.Quantity, Ingredients.Unit, Ingredients.ImagePath from Ingredients inner join IngredientsListInFridge where Ingredients.IdIngredients = IngredientsListInFridge.Fk_IdIngredients and Ingredients.IdUser = " + IdUser + ")";
+                string sql = "select Ingredients.Nom, Ingredients.ExpirationDate, Ingredients.Quantity, Ingredients.Unit, Ingredients.ImagePath from Ingredients inner join IngredientsListInFridge where Ingredients.IdIngredients = IngredientsListInFridge.Fk_IdIngredients and Ingredients.IdUser = " + IdUser;
                 SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
                 SQLiteDataReader reader = command.ExecuteReader();
 
                 while (reader.Read())
                 {
                     Ingredients ingredients = new Ingredients(Convert.ToString(reader["Nom"]),Convert.ToDateTime(reader["ExpirationDate"]),Convert.ToInt32(reader["Quantity"]),Convert.ToInt32(reader["Unit"]),Convert.ToString(reader["ImagePath"]));
+                    IngredientsInFridge.Add(ingredients);
                 }
 
             }
@@ -242,7 +271,6 @@ namespace ProjetFreeGoWindows
 
             }
            
-
             return IngredientsInFridge;
         }
 

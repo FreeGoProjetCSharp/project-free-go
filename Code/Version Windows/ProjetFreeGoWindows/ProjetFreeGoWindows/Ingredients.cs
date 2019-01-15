@@ -13,11 +13,11 @@ namespace ProjetFreeGoWindows
 
         private List<Ingredients> ingredients = new List<Ingredients>();
 
-        private string name;
-        private DateTime expirationdate;
-        private int quantity;
-        private int unit;
-        private string ImagePath;
+        public string name;
+        public DateTime expirationdate;
+        public int quantity;
+        public int unit;
+        public string ImagePath;
 
         public Ingredients(string name, DateTime expirationdate, int quantity, int unit, string ImagePath)
         {
@@ -28,10 +28,9 @@ namespace ProjetFreeGoWindows
             this.ImagePath = ImagePath;
         }
 
-
-        public void IngredientsInFrigdeByUser(string username)
+        public void AddIngredientsInFrigdeByUser(Ingredients ingredient)
         {
-
+            ingredients.Add(ingredient);
         }
 
 
