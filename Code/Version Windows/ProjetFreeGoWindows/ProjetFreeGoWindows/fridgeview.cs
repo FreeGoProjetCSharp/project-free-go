@@ -58,11 +58,30 @@ namespace ProjetFreeGoWindows
 
         private void ClickOnIngredient(object sender, EventArgs e)
         {
-            
+            PictureBox pictureBox = sender as PictureBox;
 
             foreach (Ingredients ingredients in IngredientsInfridge)
             {
-                if(ingredients.name == sender.)
+                if(ingredients.name == pictureBox.Tag)
+                {
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    string text = "Nom de l'ingrédient: " + ingredients.name + "\n" + "Quantité: " + ingredients.quantity + "\n" + "Date d'expiration: " + ingredients.expirationdate + "\n" + "Unité: " + ingredients.unit + "\n \n Voulez-vous modifier le produit?";
+
+                    result = MessageBox.Show(text,ingredients.name,buttons);
+
+                    if(result == DialogResult.Yes)
+                    {
+                        frmmodifAlim frmmodifAlim = new frmmodifAlim(informations[0], ingredients.name);
+                        frmmodifAlim.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+
+                    }
+
+                }
             }
             
         }

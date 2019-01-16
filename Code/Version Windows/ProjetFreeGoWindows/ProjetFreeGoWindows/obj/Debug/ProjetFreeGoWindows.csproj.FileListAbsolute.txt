@@ -16,3 +16,4 @@ C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\Pro
 C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.csproj.CopyComplete
 C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.frm_fridgeview.resources
 C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.frm_addAlim.resources
+C:\Users\Leo.ZMOOS\Desktop\ProjetFreeGo\project-free-go\Code\Version Windows\ProjetFreeGoWindows\ProjetFreeGoWindows\obj\Debug\ProjetFreeGoWindows.frmmodifAlim.resources

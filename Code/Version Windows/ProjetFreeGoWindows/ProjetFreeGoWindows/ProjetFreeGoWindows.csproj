@@ -83,6 +83,12 @@
     <Compile Include="lostpassword.Designer.cs">
       <DependentUpon>lostpassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="modifAlim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifAlim.Designer.cs">
+      <DependentUpon>modifAlim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users.cs" />
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="lostpassword.resx">
       <DependentUpon>lostpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifAlim.resx">
+      <DependentUpon>modifAlim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

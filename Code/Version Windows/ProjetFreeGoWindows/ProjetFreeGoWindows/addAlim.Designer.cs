@@ -42,6 +42,7 @@
             this.cmdUploadFile = new System.Windows.Forms.Button();
             this.pcbImage = new System.Windows.Forms.PictureBox();
             this.txtPathFile = new System.Windows.Forms.TextBox();
+            this.cmdCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
@@ -68,7 +69,7 @@
             // 
             // cmdAddAliment
             // 
-            this.cmdAddAliment.Location = new System.Drawing.Point(301, 364);
+            this.cmdAddAliment.Location = new System.Drawing.Point(326, 393);
             this.cmdAddAliment.Name = "cmdAddAliment";
             this.cmdAddAliment.Size = new System.Drawing.Size(103, 23);
             this.cmdAddAliment.TabIndex = 2;
@@ -162,14 +163,24 @@
             // 
             this.txtPathFile.Location = new System.Drawing.Point(17, 366);
             this.txtPathFile.Name = "txtPathFile";
-            this.txtPathFile.Size = new System.Drawing.Size(228, 20);
+            this.txtPathFile.Size = new System.Drawing.Size(127, 20);
             this.txtPathFile.TabIndex = 13;
+            // 
+            // cmdCancel
+            // 
+            this.cmdCancel.Location = new System.Drawing.Point(217, 393);
+            this.cmdCancel.Name = "cmdCancel";
+            this.cmdCancel.Size = new System.Drawing.Size(103, 23);
+            this.cmdCancel.TabIndex = 14;
+            this.cmdCancel.Text = "Annuler";
+            this.cmdCancel.UseVisualStyleBackColor = true;
             // 
             // frm_addAlim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 399);
+            this.ClientSize = new System.Drawing.Size(441, 437);
+            this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.txtPathFile);
             this.Controls.Add(this.pcbImage);
             this.Controls.Add(this.cmdUploadFile);
@@ -211,5 +222,6 @@
         private System.Windows.Forms.Button cmdUploadFile;
         private System.Windows.Forms.PictureBox pcbImage;
         private System.Windows.Forms.TextBox txtPathFile;
+        private System.Windows.Forms.Button cmdCancel;
     }
 }
