@@ -62,7 +62,7 @@ namespace ProjetFreeGoWindows
 
             foreach (Ingredients ingredients in IngredientsInfridge)
             {
-                if(ingredients.name == pictureBox.Tag)
+                if(ingredients.name == (string)pictureBox.Tag)
                 {
                     MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                     DialogResult result;
@@ -84,6 +84,11 @@ namespace ProjetFreeGoWindows
                 }
             }
             
+        }
+
+        private void cmdRemoveAlim_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

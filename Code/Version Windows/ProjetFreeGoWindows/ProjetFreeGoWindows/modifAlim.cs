@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SQLite;
 
 namespace ProjetFreeGoWindows
 {
@@ -59,12 +60,6 @@ namespace ProjetFreeGoWindows
                     unit = ingredients.unit;
                     expirationdate = ingredients.expirationdate;
                     path = ingredients.ImagePath;
-
-                    lblName.Text = name;
-                    txtName.Text = name;
-                    numericQuantity.Value = quantity;
-                    numericUnit.Value = unit;
-                    cldrExpiration.SelectionRange.Start = expirationdate;
                 }
             }
         }
@@ -80,17 +75,43 @@ namespace ProjetFreeGoWindows
             DateTime actualdate = DateTime.Now;
 
             if (txtName.Text != "" && numericQuantity.Value > 0 && numericUnit.Value > 0 && date >= actualdate)
-            {   
-                if (name != lblName.Text || quantity != numericQuantity.Value || unit != numericQuantity.Value)
+            {
+                if (name != txtName.Text || quantity != numericQuantity.Value || unit != numericQuantity.Value)
                 {
-                    string destpath = path.Replace(name, lblName.Text);
-                    File.Move(path, destpath);
+                    // Rename Image File
+                    string destpath = path.Replace(name, txtName.Text);
+                    try
+                    {
+                        File.Move(path, destpath);
+                    }
+                    catch (Exception ex)
+                    {
 
-                    //UPDATE Ingredients SET Nom="Bananeee", Quantity=3, Unit=3 WHERE Nom='Banane'
-                    string sql = "UPDATE Ingredients SET Nom=" + "'" + lblName.Text + "'" + " WHERE Nom=" + name;
+                    }
 
 
+                    // Modify ingredients values in Database
+                    conn.ModifIngredient(txtName.Text, (int)numericQuantity.Value, (int)numericUnit.Value, name);
+
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result;
+
+                    string text = "L'ingrédient à été correctement modifié";
+
+                    result = MessageBox.Show(text, name, buttons);
+
+                    if (result == DialogResult.OK)
+                    {
+                        frm_fridgeview frm_Fridgeview = new frm_fridgeview(informations[0]);
+                        frm_Fridgeview.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+
+                    }
                 }
+                else { MessageBox.Show("Vous n'avez rien modifier"); }
             }
         }
     }

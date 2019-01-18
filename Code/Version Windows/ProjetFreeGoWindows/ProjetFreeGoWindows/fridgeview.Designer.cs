@@ -32,11 +32,11 @@
             this.lblName = new System.Windows.Forms.Label();
             this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             this.flp = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsrName = new System.Windows.Forms.Label();
             this.cmdAddAlim = new System.Windows.Forms.Button();
             this.cmdRemoveAlim = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -70,6 +70,14 @@
             this.flp.Name = "flp";
             this.flp.Size = new System.Drawing.Size(446, 512);
             this.flp.TabIndex = 2;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(0, 0);
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // label1
             // 
@@ -108,14 +116,7 @@
             this.cmdRemoveAlim.TabIndex = 6;
             this.cmdRemoveAlim.Text = "Retirer un aliment";
             this.cmdRemoveAlim.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(0, 0);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.cmdRemoveAlim.Click += new System.EventHandler(this.cmdRemoveAlim_Click);
             // 
             // frm_fridgeview
             // 

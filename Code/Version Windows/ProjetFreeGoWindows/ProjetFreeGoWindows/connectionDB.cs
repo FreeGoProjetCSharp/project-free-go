@@ -209,7 +209,7 @@ namespace ProjetFreeGoWindows
         }
 
         /// <summary>
-        /// 
+        /// AddIngredient: Add a new Ingredient to the database
         /// </summary>
         /// <param name="UserName"></param>
         /// <param name="Name"></param>
@@ -245,7 +245,7 @@ namespace ProjetFreeGoWindows
         }
 
         /// <summary>
-        /// 
+        /// GetIngredientsByUser: Get All Ingredients for a specific user
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
@@ -272,6 +272,20 @@ namespace ProjetFreeGoWindows
             }
            
             return IngredientsInFridge;
+        }
+
+        /// <summary>
+        /// ModifIngredient: Modify Ingredient Values
+        /// </summary>
+        /// <param name="IngName"></param>
+        /// <param name="Quantity"></param>
+        /// <param name="Unit"></param>
+        /// <param name="oldIngName"></param>
+        public void ModifIngredient(string IngName, int Quantity, int Unit, string oldIngName)
+        {
+            string sql = "UPDATE Ingredients SET Nom=" + "'" + IngName + "'," + " Quantity=" + Quantity+ "," + "Unit=" + Unit + " WHERE Nom=" +"'"+ oldIngName+ "'";
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery();
         }
 
 
