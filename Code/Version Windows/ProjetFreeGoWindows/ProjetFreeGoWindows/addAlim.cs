@@ -19,7 +19,7 @@ namespace ProjetFreeGoWindows
         bool imageupload = false; // For knowing if the image was upload correctly
 
         /// <summary>
-        /// frm_addAlim: Constructor
+        /// frm_addAlim: Constructor of Add Ingredient form
         /// </summary>
         /// <param name="username"></param>
         public frm_addAlim(string username)
@@ -29,7 +29,7 @@ namespace ProjetFreeGoWindows
         }
 
         /// <summary>
-        /// frm_addAlim_Load: Load Form
+        /// frm_addAlim_Load: Load Form(Add Ingredient)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -57,7 +57,7 @@ namespace ProjetFreeGoWindows
         }
 
         /// <summary>
-        /// 
+        /// cmdAddAliment_Click: Add New Ingredient
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -101,6 +101,11 @@ namespace ProjetFreeGoWindows
             } 
         }
 
+        /// <summary>
+        /// cmdCancel_Click: Return to the main form: fridgeview.cs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdCancel_Click(object sender, EventArgs e)
         {
             frm_fridgeview frm_Fridgeview = new frm_fridgeview(informations[0]);

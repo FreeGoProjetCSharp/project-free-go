@@ -14,7 +14,7 @@ namespace ProjetFreeGoWindows
 {
     public partial class frm_createaccount : Form
     {
-        private connectionDB conn;
+        private connectionDB conn; // Connection to database
 
 
         public frm_createaccount()

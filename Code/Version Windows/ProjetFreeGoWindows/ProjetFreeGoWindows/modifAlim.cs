@@ -29,7 +29,7 @@ namespace ProjetFreeGoWindows
         private List<Ingredients> IngredientsInfridge = new List<Ingredients>(); // List of ingredients
 
         /// <summary>
-        /// 
+        /// frmmodifAlim: Constructor of modifalim form
         /// </summary>
         /// <param name="username"></param>
         /// <param name="ingredient"></param>
@@ -41,14 +41,16 @@ namespace ProjetFreeGoWindows
         }
 
         /// <summary>
-        /// 
+        /// frmmodifAlim_Load: Load Modification Ingredient form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void frmmodifAlim_Load(object sender, EventArgs e)
         {
+            // Limit selection, choose only one day
             cldrExpiration.MaxSelectionCount = 1;
 
+            // Get List of ingredients
             IngredientsInfridge = conn.GetIngredientsByUser(informations[0]);
 
             foreach(Ingredients ingredients in IngredientsInfridge)
@@ -70,7 +72,7 @@ namespace ProjetFreeGoWindows
         }
 
         /// <summary>
-        /// 
+        /// cmdModif_Click: Modification Ingredients
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -119,6 +121,11 @@ namespace ProjetFreeGoWindows
             }
         }
 
+        /// <summary>
+        /// cmdCancel_Click: Return to the main form: fridgeview.cs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdCancel_Click(object sender, EventArgs e)
         {
             frm_fridgeview frm_Fridgeview = new frm_fridgeview(informations[0]);
