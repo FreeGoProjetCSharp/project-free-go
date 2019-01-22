@@ -100,5 +100,12 @@ namespace ProjetFreeGoWindows
                 MessageBox.Show("Veuillez entrer tout les champs");
             } 
         }
+
+        private void cmdCancel_Click(object sender, EventArgs e)
+        {
+            frm_fridgeview frm_Fridgeview = new frm_fridgeview(informations[0]);
+            frm_Fridgeview.Show();
+            this.Hide();
+        }
     }
 }

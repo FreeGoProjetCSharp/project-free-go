@@ -60,6 +60,11 @@ namespace ProjetFreeGoWindows
                     unit = ingredients.unit;
                     expirationdate = ingredients.expirationdate;
                     path = ingredients.ImagePath;
+
+                    txtName.Text = name;
+                    numericQuantity.Value = quantity;
+                    numericUnit.Value = unit;
+                    cldrExpiration.SetDate(expirationdate);
                 }
             }
         }
@@ -76,7 +81,7 @@ namespace ProjetFreeGoWindows
 
             if (txtName.Text != "" && numericQuantity.Value > 0 && numericUnit.Value > 0 && date >= actualdate)
             {
-                if (name != txtName.Text || quantity != numericQuantity.Value || unit != numericQuantity.Value)
+                if (name != txtName.Text || quantity != numericQuantity.Value || unit != numericQuantity.Value || date > expirationdate)
                 {
                     // Rename Image File
                     string destpath = path.Replace(name, txtName.Text);
@@ -113,6 +118,13 @@ namespace ProjetFreeGoWindows
                 }
                 else { MessageBox.Show("Vous n'avez rien modifier"); }
             }
+        }
+
+        private void cmdCancel_Click(object sender, EventArgs e)
+        {
+            frm_fridgeview frm_Fridgeview = new frm_fridgeview(informations[0]);
+            frm_Fridgeview.Show();
+            this.Hide();
         }
     }
 }

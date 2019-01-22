@@ -133,6 +133,7 @@
             this.cmdCancel.TabIndex = 19;
             this.cmdCancel.Text = "Annuler";
             this.cmdCancel.UseVisualStyleBackColor = true;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
             // frmmodifAlim
             // 

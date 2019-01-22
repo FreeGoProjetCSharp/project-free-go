@@ -17,7 +17,10 @@ namespace ProjetFreeGoWindows
 
         private List<Ingredients> IngredientsInfridge = new List<Ingredients>();
 
-
+        /// <summary>
+        /// frm_fridgeview: Constructor of fridge view form
+        /// </summary>
+        /// <param name="username"></param>
         public frm_fridgeview(string username)
         {
             InitializeComponent();
@@ -26,12 +29,18 @@ namespace ProjetFreeGoWindows
             this.informations = conn.GetUserInfo(username);
         }
 
+        /// <summary>
+        /// frm_fridgeview_Load: Load of fridge view form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frm_fridgeview_Load(object sender, EventArgs e)
         {
             IngredientsInfridge = conn.GetIngredientsByUser(informations[0]);
-            int i = 0;
+            int i = 0; 
+            DateTime actualdate = DateTime.Now;
 
-            foreach(Ingredients ingredients in IngredientsInfridge)
+            foreach (Ingredients ingredients in IngredientsInfridge)
             {
                 PictureBox pcb = new PictureBox();
 
@@ -43,12 +52,23 @@ namespace ProjetFreeGoWindows
                 pcb.Height = 140;
                 pcb.Tag = ingredients.name;
 
+                if(ingredients.expirationdate < actualdate)
+                {
+                    MessageBox.Show("L'ingrédient: "+ingredients.name+" est périmé, il sera donc supprimer de votre frigo");
+                    conn.RemoveIngredient(ingredients.name);
+                }
+
                 pcb.Click += ClickOnIngredient;
 
                 flp.Controls.Add(pcb);
             }
         }
 
+        /// <summary>
+        /// cmdAddAlim_Click: Add a new Aliment
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmdAddAlim_Click(object sender, EventArgs e)
         {
             frm_addAlim frm_AddAlim = new frm_addAlim(informations[0]);
@@ -56,6 +76,11 @@ namespace ProjetFreeGoWindows
             this.Hide();
         }
 
+        /// <summary>
+        /// ClickOnIngredient: event click on ingredients to see full informations
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickOnIngredient(object sender, EventArgs e)
         {
             PictureBox pictureBox = sender as PictureBox;
@@ -88,7 +113,9 @@ namespace ProjetFreeGoWindows
 
         private void cmdRemoveAlim_Click(object sender, EventArgs e)
         {
-
+            frmremoveAlim frmremoveAlim = new frmremoveAlim(informations[0]);
+            frmremoveAlim.Show();
+            this.Hide();
         }
     }
 }

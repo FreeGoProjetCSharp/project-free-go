@@ -67,8 +67,6 @@ namespace ProjetFreeGoWindows
                 frm_fridgeview frm_Fridgeview = new frm_fridgeview(username);
                 frm_Fridgeview.Show();
                 this.Hide();
-
-                MessageBox.Show("Vous êtes connecté en tant que: " + username);
             }
             
         }

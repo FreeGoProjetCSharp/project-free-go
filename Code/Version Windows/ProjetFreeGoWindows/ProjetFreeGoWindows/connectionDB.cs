@@ -281,9 +281,16 @@ namespace ProjetFreeGoWindows
         /// <param name="Quantity"></param>
         /// <param name="Unit"></param>
         /// <param name="oldIngName"></param>
-        public void ModifIngredient(string IngName, int Quantity, int Unit, string oldIngName)
+        public void ModifIngredient(string IngName, int Quantity, int Unit, DateTime expirationdate, string oldIngName)
         {
             string sql = "UPDATE Ingredients SET Nom=" + "'" + IngName + "'," + " Quantity=" + Quantity+ "," + "Unit=" + Unit + " WHERE Nom=" +"'"+ oldIngName+ "'";
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery();
+        }
+
+        public void RemoveIngredient(string IngName)
+        {
+            string sql = "DELETE FROM Ingredients WHERE Ingredients.Nom = "+"'"+IngName+"'";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
         }
