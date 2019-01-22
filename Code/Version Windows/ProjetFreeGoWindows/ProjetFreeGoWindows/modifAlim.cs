@@ -94,9 +94,8 @@ namespace ProjetFreeGoWindows
 
                     }
 
-
                     // Modify ingredients values in Database
-                    conn.ModifIngredient(txtName.Text, (int)numericQuantity.Value, (int)numericUnit.Value, name);
+                    conn.ModifIngredient(txtName.Text, (int)numericQuantity.Value, (int)numericUnit.Value, expirationdate, name);
 
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
                     DialogResult result;
