@@ -1,0 +1,202 @@
+\hypertarget{class_projet_free_go_windows_1_1connection_d_b}{}\section{Projet\+Free\+Go\+Windows.\+connection\+DB Class Reference}
+\label{class_projet_free_go_windows_1_1connection_d_b}\index{Projet\+Free\+Go\+Windows.\+connection\+DB@{Projet\+Free\+Go\+Windows.\+connection\+DB}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_projet_free_go_windows_1_1connection_d_b_a74e5cd91e5b8a2d76686a461825928b3}{connection\+DB} ()
+\item 
+string \hyperlink{class_projet_free_go_windows_1_1connection_d_b_a19f270f3ae9bdf72c893ff816c13f07a}{Create\+M\+D5} (string input)
+\begin{DoxyCompactList}\small\item\em Method to hash password in M\+D5 \end{DoxyCompactList}\item 
+void \hyperlink{class_projet_free_go_windows_1_1connection_d_b_a93b0c9afdcecdf6037914803abb2b98f}{Create\+Account} (string username, string mail, string password)
+\begin{DoxyCompactList}\small\item\em Method to create new account \end{DoxyCompactList}\item 
+bool \hyperlink{class_projet_free_go_windows_1_1connection_d_b_a0dcd082489031a2cd443b7e384905755}{Login} (string username, string password)
+\begin{DoxyCompactList}\small\item\em Method to login \end{DoxyCompactList}\item 
+string \mbox{[}$\,$\mbox{]} \hyperlink{class_projet_free_go_windows_1_1connection_d_b_ae017d427bfa452aaaaf4a096a1bdbe36}{Get\+User\+Info} (string username)
+\begin{DoxyCompactList}\small\item\em Get username and email from selected user \end{DoxyCompactList}\item 
+bool \hyperlink{class_projet_free_go_windows_1_1connection_d_b_a2dfea9efb2c92de8c2bfe25774d31ebb}{Add\+Ingredient} (string User\+Name, string Name, string Expiration\+Date, int Quantity, int Unit, string Path)
+\begin{DoxyCompactList}\small\item\em Add\+Ingredient\+: Add a new Ingredient to the database \end{DoxyCompactList}\item 
+List$<$ \hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients} $>$ \hyperlink{class_projet_free_go_windows_1_1connection_d_b_a18ad4bdf2a991803a1a2b4d8e39c5900}{Get\+Ingredients\+By\+User} (string username)
+\begin{DoxyCompactList}\small\item\em Get\+Ingredients\+By\+User\+: Get All \hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients} for a specific user \end{DoxyCompactList}\item 
+void \hyperlink{class_projet_free_go_windows_1_1connection_d_b_ae604e65630f4bd5efa4bfc3782b9e596}{Modif\+Ingredient} (string Ing\+Name, int Quantity, int Unit, Date\+Time expirationdate, string old\+Ing\+Name)
+\begin{DoxyCompactList}\small\item\em Modif\+Ingredient\+: Modify Ingredient Values \end{DoxyCompactList}\item 
+void \hyperlink{class_projet_free_go_windows_1_1connection_d_b_ac4c80e807d95242a5c57c94616b32d21}{Remove\+Ingredient} (string Ing\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients} $>$ \hyperlink{class_projet_free_go_windows_1_1connection_d_b_a012e8aab7de16e823696c80b8cbfb942}{Ingredients\+In\+Fridge} = new List$<$\hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_a74e5cd91e5b8a2d76686a461825928b3}\label{class_projet_free_go_windows_1_1connection_d_b_a74e5cd91e5b8a2d76686a461825928b3}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!connection\+DB@{connection\+DB}}
+\index{connection\+DB@{connection\+DB}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{connection\+D\+B()}{connectionDB()}}
+{\footnotesize\ttfamily Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+connection\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_a2dfea9efb2c92de8c2bfe25774d31ebb}\label{class_projet_free_go_windows_1_1connection_d_b_a2dfea9efb2c92de8c2bfe25774d31ebb}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Add\+Ingredient@{Add\+Ingredient}}
+\index{Add\+Ingredient@{Add\+Ingredient}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Add\+Ingredient()}{AddIngredient()}}
+{\footnotesize\ttfamily bool Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Add\+Ingredient (\begin{DoxyParamCaption}\item[{string}]{User\+Name,  }\item[{string}]{Name,  }\item[{string}]{Expiration\+Date,  }\item[{int}]{Quantity,  }\item[{int}]{Unit,  }\item[{string}]{Path }\end{DoxyParamCaption})}
+
+
+
+Add\+Ingredient\+: Add a new Ingredient to the database 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Name} & \\
+\hline
+{\em Name} & \\
+\hline
+{\em Expiration\+Date} & \\
+\hline
+{\em Quantity} & \\
+\hline
+{\em Unit} & \\
+\hline
+{\em Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_a93b0c9afdcecdf6037914803abb2b98f}\label{class_projet_free_go_windows_1_1connection_d_b_a93b0c9afdcecdf6037914803abb2b98f}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Create\+Account@{Create\+Account}}
+\index{Create\+Account@{Create\+Account}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Create\+Account()}{CreateAccount()}}
+{\footnotesize\ttfamily void Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Create\+Account (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{string}]{mail,  }\item[{string}]{password }\end{DoxyParamCaption})}
+
+
+
+Method to create new account 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \\
+\hline
+{\em mail} & \\
+\hline
+{\em password} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_a19f270f3ae9bdf72c893ff816c13f07a}\label{class_projet_free_go_windows_1_1connection_d_b_a19f270f3ae9bdf72c893ff816c13f07a}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Create\+M\+D5@{Create\+M\+D5}}
+\index{Create\+M\+D5@{Create\+M\+D5}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Create\+M\+D5()}{CreateMD5()}}
+{\footnotesize\ttfamily string Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Create\+M\+D5 (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})}
+
+
+
+Method to hash password in M\+D5 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_a18ad4bdf2a991803a1a2b4d8e39c5900}\label{class_projet_free_go_windows_1_1connection_d_b_a18ad4bdf2a991803a1a2b4d8e39c5900}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Get\+Ingredients\+By\+User@{Get\+Ingredients\+By\+User}}
+\index{Get\+Ingredients\+By\+User@{Get\+Ingredients\+By\+User}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Get\+Ingredients\+By\+User()}{GetIngredientsByUser()}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients}$>$ Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Get\+Ingredients\+By\+User (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Get\+Ingredients\+By\+User\+: Get All \hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients} for a specific user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_ae017d427bfa452aaaaf4a096a1bdbe36}\label{class_projet_free_go_windows_1_1connection_d_b_ae017d427bfa452aaaaf4a096a1bdbe36}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Get\+User\+Info@{Get\+User\+Info}}
+\index{Get\+User\+Info@{Get\+User\+Info}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Get\+User\+Info()}{GetUserInfo()}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Get\+User\+Info (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Get username and email from selected user 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_a0dcd082489031a2cd443b7e384905755}\label{class_projet_free_go_windows_1_1connection_d_b_a0dcd082489031a2cd443b7e384905755}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Login@{Login}}
+\index{Login@{Login}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily bool Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Login (\begin{DoxyParamCaption}\item[{string}]{username,  }\item[{string}]{password }\end{DoxyParamCaption})}
+
+
+
+Method to login 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \\
+\hline
+{\em password} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_ae604e65630f4bd5efa4bfc3782b9e596}\label{class_projet_free_go_windows_1_1connection_d_b_ae604e65630f4bd5efa4bfc3782b9e596}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Modif\+Ingredient@{Modif\+Ingredient}}
+\index{Modif\+Ingredient@{Modif\+Ingredient}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Modif\+Ingredient()}{ModifIngredient()}}
+{\footnotesize\ttfamily void Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Modif\+Ingredient (\begin{DoxyParamCaption}\item[{string}]{Ing\+Name,  }\item[{int}]{Quantity,  }\item[{int}]{Unit,  }\item[{Date\+Time}]{expirationdate,  }\item[{string}]{old\+Ing\+Name }\end{DoxyParamCaption})}
+
+
+
+Modif\+Ingredient\+: Modify Ingredient Values 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ing\+Name} & \\
+\hline
+{\em Quantity} & \\
+\hline
+{\em Unit} & \\
+\hline
+{\em old\+Ing\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_ac4c80e807d95242a5c57c94616b32d21}\label{class_projet_free_go_windows_1_1connection_d_b_ac4c80e807d95242a5c57c94616b32d21}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Remove\+Ingredient@{Remove\+Ingredient}}
+\index{Remove\+Ingredient@{Remove\+Ingredient}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Remove\+Ingredient()}{RemoveIngredient()}}
+{\footnotesize\ttfamily void Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Remove\+Ingredient (\begin{DoxyParamCaption}\item[{string}]{Ing\+Name }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_projet_free_go_windows_1_1connection_d_b_a012e8aab7de16e823696c80b8cbfb942}\label{class_projet_free_go_windows_1_1connection_d_b_a012e8aab7de16e823696c80b8cbfb942}} 
+\index{Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}!Ingredients\+In\+Fridge@{Ingredients\+In\+Fridge}}
+\index{Ingredients\+In\+Fridge@{Ingredients\+In\+Fridge}!Projet\+Free\+Go\+Windows\+::connection\+DB@{Projet\+Free\+Go\+Windows\+::connection\+DB}}
+\subsubsection{\texorpdfstring{Ingredients\+In\+Fridge}{IngredientsInFridge}}
+{\footnotesize\ttfamily List$<$\hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients}$>$ Projet\+Free\+Go\+Windows.\+connection\+D\+B.\+Ingredients\+In\+Fridge = new List$<$\hyperlink{class_projet_free_go_windows_1_1_ingredients}{Ingredients}$>$()}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+Free\+Go\+Windows/\hyperlink{connection_d_b_8cs}{connection\+D\+B.\+cs}\end{DoxyCompactItemize}
