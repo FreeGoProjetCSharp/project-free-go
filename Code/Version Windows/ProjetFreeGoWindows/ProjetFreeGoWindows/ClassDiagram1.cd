@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjetFreeGoWindows.connectionDB">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQAAAAIAAAQAAIBAAAAACAAFAgAACQAAAAQAA=</HashCode>
+      <FileName>connectionDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetFreeGoWindows.Ingredients">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAABAgAEAAIAAAAIAAAAQEAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Ingredients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetFreeGoWindows.Users">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAkAAAAE=</HashCode>
+      <FileName>Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

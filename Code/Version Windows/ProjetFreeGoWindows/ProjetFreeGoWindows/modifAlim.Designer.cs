@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmdModif = new System.Windows.Forms.Button();
             this.cmdCancel = new System.Windows.Forms.Button();
+            this.lblInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
             this.SuspendLayout();
@@ -135,11 +136,22 @@
             this.cmdCancel.UseVisualStyleBackColor = true;
             this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(24, 37);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(298, 20);
+            this.lblInfo.TabIndex = 20;
+            this.lblInfo.Text = "Formulaire de modification d\'aliment";
+            // 
             // frmmodifAlim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 398);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.cmdModif);
             this.Controls.Add(this.numericUnit);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button cmdModif;
         private System.Windows.Forms.Button cmdCancel;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
